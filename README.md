@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Hero Screenshot](docs/screenshots/hero.png)
+![Weather Combat Game Demo](docs/screenshots/hero.gif)
 
 **Turn real-time weather data into epic RPG battles!**
 
