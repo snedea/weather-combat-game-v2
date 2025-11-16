@@ -1,0 +1,27 @@
+{
+  "generated": "2025-11-16T19:14:29.096Z",
+  "baseURL": "http://localhost:5174",
+  "projectType": "web-app",
+  "screenshots": [
+    {
+      "filename": "hero.png",
+      "path": "docs/screenshots/hero.png",
+      "type": "hero",
+      "description": "Main application view - city selection screen"
+    },
+    {
+      "filename": "feature-03-mobile-view.png",
+      "path": "docs/screenshots/feature-03-mobile-view.png",
+      "type": "feature",
+      "description": "Mobile responsive design"
+    }
+  ],
+  "total": 2,
+  "failed": 1,
+  "failedScreenshots": [
+    {
+      "name": "feature-01-city-input",
+      "error": "page.fill: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder*=\"city\" i]:first-of-type')\u001b[22m\n"
+    }
+  ]
+}

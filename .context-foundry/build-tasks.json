@@ -1,0 +1,60 @@
+{
+  "parallel_mode": false,
+  "total_tasks": 9,
+  "tasks": [
+    {
+      "id": "task-1",
+      "description": "Create shared types system",
+      "files": ["shared/types/weather.ts", "shared/types/combat.ts", "shared/types/api.ts", "shared/types/index.ts"],
+      "dependencies": []
+    },
+    {
+      "id": "task-2",
+      "description": "Setup backend foundation",
+      "files": ["backend/package.json", "backend/tsconfig.json", "backend/.env.example", "backend/src/config/env.ts"],
+      "dependencies": ["task-1"]
+    },
+    {
+      "id": "task-3",
+      "description": "Create backend services",
+      "files": ["backend/src/services/cacheService.ts", "backend/src/services/weatherService.ts", "backend/src/services/combatEngine.ts"],
+      "dependencies": ["task-1", "task-2"]
+    },
+    {
+      "id": "task-4",
+      "description": "Create backend routes and middleware",
+      "files": ["backend/src/routes/weather.routes.ts", "backend/src/routes/index.ts", "backend/src/middleware/errorHandler.ts", "backend/src/middleware/validator.ts", "backend/src/utils/logger.ts", "backend/src/utils/weatherMapper.ts"],
+      "dependencies": ["task-3"]
+    },
+    {
+      "id": "task-5",
+      "description": "Create backend server",
+      "files": ["backend/src/server.ts"],
+      "dependencies": ["task-4"]
+    },
+    {
+      "id": "task-6",
+      "description": "Setup frontend foundation",
+      "files": ["frontend/package.json", "frontend/tsconfig.json", "frontend/vite.config.ts", "frontend/tailwind.config.js", "frontend/.env.example", "frontend/index.html"],
+      "dependencies": ["task-1"]
+    },
+    {
+      "id": "task-7",
+      "description": "Create frontend utilities and store",
+      "files": ["frontend/src/utils/api.ts", "frontend/src/utils/animations.ts", "frontend/src/utils/formatters.ts", "frontend/src/store/battleStore.ts", "frontend/src/types/index.ts"],
+      "dependencies": ["task-6"]
+    },
+    {
+      "id": "task-8",
+      "description": "Create frontend components",
+      "files": ["frontend/src/components/CityCard.tsx", "frontend/src/components/CitySelector.tsx", "frontend/src/components/CombatArena.tsx", "frontend/src/components/HealthBar.tsx", "frontend/src/components/CombatLog.tsx", "frontend/src/components/ActionButtons.tsx", "frontend/src/components/WeatherTooltip.tsx", "frontend/src/components/StatDisplay.tsx", "frontend/src/components/ElementalIcon.tsx", "frontend/src/components/LoadingSpinner.tsx"],
+      "dependencies": ["task-7"]
+    },
+    {
+      "id": "task-9",
+      "description": "Create main app and configuration",
+      "files": ["frontend/src/App.tsx", "frontend/src/main.tsx", "frontend/src/index.css", "frontend/src/constants/weatherFacts.ts", "frontend/src/constants/educationalContent.ts"],
+      "dependencies": ["task-8"]
+    }
+  ]
+}

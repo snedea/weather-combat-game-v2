@@ -1,0 +1,18 @@
+{
+  "PhaseInfo": {
+    "sessionId": "weather-combat-game-v2",
+    "currentPhase": "Deploy",
+    "status": "analyzing",
+    "progressDetail": "Starting Deploy phase",
+    "testIteration": 0,
+    "timestamps": {
+      "phaseStart": "2023-10-01T10:00:00Z",
+      "phaseEnd": null,
+      "lastUpdated": "2023-10-01T10:00:00Z"
+    },
+    "completionTracking": {
+      "isComplete": false,
+      "completionPercentage": 0
+    }
+  }
+}
